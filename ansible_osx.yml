@@ -16,12 +16,13 @@
     - name: 'add custom homebrew repos'
       community.general.homebrew_tap:
         name: [
-          adoptopenjdk/openjdk,
-          fishtown-analytics/dbt,
-          heroku/brew,
+          homebrew/cask,
+          homebrew/cask-fonts,
           homebrew/cask-versions,
-          thoughtbot/formulae,
-          weaveworks/tap,
+          homebrew/bundle,
+          nicoverbruggen/homebrew-cask,
+          d12frosted/emacs-plus,
+          hashicorp/tap,
         ]
 
     - name: Install core packages via brew casks
@@ -29,25 +30,27 @@
         name: "{{ item }}"
       ignore_errors: yes
       with_items:
-        - 1password
+        - brave-browser
         - android-sdk
-        - android-studio
-        - datagrip
+        - alfred
+        - evernote
         - docker
-        - dropbox
-        - figma
+        - vagrant
         - google-chrome
-        - google-cloud-sdk
+        - foobar2000
         - iterm2
         - kindle
         - ngrok
-        - slack
-        - sublime-text
-        - telegram
         - visual-studio-code
         - vlc
-        - zoom
-        - tuple
+        - font-lato
+        - font-roboto
+        - font-source-code-pro-for-powerline
+        - font-source-code-pro
+        - font-iosevka-ss04
+        - font-iosevka-nerd-font
+        - font-source-sans-pro
+        - font-ubuntu-nerd-font
 
     - name: "Install homebrew packages"
       community.general.homebrew:
