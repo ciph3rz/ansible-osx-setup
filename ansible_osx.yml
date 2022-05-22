@@ -37,12 +37,16 @@
         - docker
         - vagrant
         - google-chrome
+        - firefox
         - foobar2000
         - iterm2
         - kindle
         - ngrok
+        - the-unarchiver
+        - transmission
         - visual-studio-code
         - vlc
+        - utm
         - font-lato
         - font-roboto
         - font-source-code-pro-for-powerline
@@ -71,16 +75,16 @@
           'heroku',
           'htop',
           'imagemagick@6',
-          'kubectx',
-          'kubernetes-cli',
-          'kubernetes-helm',
+          # 'kubectx',
+          # 'kubernetes-cli',
+          # 'kubernetes-helm',
           'libtool',
           'libxslt',
           'libyaml',
           'mas',
           'openssl' ,
           'pkg-config',
-          'postgresql',
+          # 'postgresql',
           'rcm',
           'readline',
           'redis',
