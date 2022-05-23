@@ -24,6 +24,52 @@
           d12frosted/emacs-plus,
           hashicorp/tap,
         ]
+    - name: "Install homebrew packages"
+      community.general.homebrew:
+        name: [
+          'autoconf',
+          'automake',
+          'aws-iam-authenticator',
+          'awscli',
+          'bfg',
+          'coreutils',
+          'curl',
+          'direnv',
+          'dnsmasq',
+          'fzf',
+          'gnu-time',
+          'gpg',
+          'htop',
+          'imagemagick@6',
+          # 'kubectx',
+          # 'kubernetes-cli',
+          # 'kubernetes-helm',
+          'libtool',
+          'libxslt',
+          'libyaml',
+          'mas',
+          'openssl' ,
+          'pkg-config',
+          # 'postgresql',
+          'rcm',
+          'readline',
+          'redis',
+          'svn',
+          'sqlite3',
+          'tmux',
+          'unixodbc',
+          'unzip',
+          'vim',
+          'watchman',
+          'wireguard-go',
+          'xz',
+          'yarn',
+          'zlib',
+          'zsh',
+        ]
+        state: present
+        update_homebrew: yes
+
 
     - name: Install core packages via brew casks
       community.general.homebrew_cask:
@@ -55,53 +101,6 @@
         - font-iosevka-nerd-font
         - font-source-sans-pro
         - font-ubuntu-nerd-font
-
-    - name: "Install homebrew packages"
-      community.general.homebrew:
-        name: [
-          'autoconf',
-          'automake',
-          'aws-iam-authenticator',
-          'awscli',
-          'bfg',
-          'coreutils',
-          'curl',
-          'dbt@0.18.0',
-          'direnv',
-          'dnsmasq',
-          'fzf',
-          'gnu-time',
-          'gpg',
-          'heroku',
-          'htop',
-          'imagemagick@6',
-          # 'kubectx',
-          # 'kubernetes-cli',
-          # 'kubernetes-helm',
-          'libtool',
-          'libxslt',
-          'libyaml',
-          'mas',
-          'openssl' ,
-          'pkg-config',
-          # 'postgresql',
-          'rcm',
-          'readline',
-          'redis',
-          'sqlite3',
-          'tmux',
-          'unixodbc',
-          'unzip',
-          'vim',
-          'watchman',
-          'wireguard-go',
-          'xz',
-          'yarn',
-          'zlib',
-          'zsh',
-        ]
-        state: present
-        update_homebrew: yes
 
     - name: "Install from Mac app store"
       shell: mas install {{ item }}
