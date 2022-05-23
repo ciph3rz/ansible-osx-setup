@@ -101,6 +101,7 @@
         - font-iosevka-nerd-font
         - font-source-sans-pro
         - font-ubuntu-nerd-font
+        - font-hack-nerd-font
 
     - name: "Install from Mac app store"
       shell: mas install {{ item }}
