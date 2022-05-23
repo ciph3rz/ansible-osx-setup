@@ -47,7 +47,6 @@
         - visual-studio-code
         - vlc
         - utm
-        - wireguard-go
         - font-lato
         - font-roboto
         - font-source-code-pro-for-powerline
@@ -95,6 +94,7 @@
           'unzip',
           'vim',
           'watchman',
+          'wireguard-go',
           'xz',
           'yarn',
           'zlib',
