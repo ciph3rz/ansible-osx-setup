@@ -135,6 +135,7 @@
     #   args:
     #     creates: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh"
 
+
     # - name: Set ZSH as the default shell
     #   shell: chsh -s $(which zsh) {{ lookup('env', 'USER') }}
     #   become: true
