@@ -2,8 +2,8 @@
 - name: Downloading Dotfiles
   git:
     repo: https://github.com/ciph3rz/dotfiles.git
-    dest: ~/code/.dotfiles
+    dest: ~/code/dotfiles
     version: linux
 
 - name: Symlinking dotfiles
-  shell: ~/code/.dotfiles/make-symlinks.sh
+  shell: ~/code/dotfiles/make-symlinks.sh
