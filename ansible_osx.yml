@@ -105,12 +105,23 @@
         - font-ubuntu-nerd-font
         - font-hack-nerd-font
 
+    - name: Uninstall emacs if already installed
+      community.general.homebrew:
+        name: "emacs-plus"
+        state: absent
+
     - name: Install emacs via brew  with options
       community.general.homebrew:
         name: "emacs-plus"
         state: present
         install_options: with-modern-black-dragon-icon,with-mailutils,with-imagemagick
         #install_options: "with-modern-doom3-icon"
+    
+    - name: Cloning Doom Emacs to .emacs.d directory
+      git:
+        repo: https://github.com/hlissner/doom-emacs
+        dest: "/Users/{{ lookup('env', 'USER') }}/.emacs.d"
+
 
     - name: "Install from Mac app store"
       shell: mas install {{ item }}
@@ -138,6 +149,9 @@
 
     - name: Configure Dotfiles
       import_tasks: tasks/dotfiles.yml
+
+    - name: Install Missing Fonts
+      import_tasks: tasks/fonts.yml
 
     # - name: Install Oh My ZSH
     #   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
