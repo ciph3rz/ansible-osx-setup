@@ -109,7 +109,7 @@
       community.general.homebrew_cask:
         name: "emacs-plus"
         state: present
-        install_options: '--HEAD --with-modern-black-dragon-icon --with-mailutils'
+        install_options: '--HEAD,--with-modern-black-dragon-icon,--with-mailutils'
 
     - name: "Install from Mac app store"
       shell: mas install {{ item }}
