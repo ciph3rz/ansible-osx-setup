@@ -25,6 +25,7 @@
           d12frosted/emacs-plus,
           hashicorp/tap,
         ]
+
     - name: "Install homebrew packages"
       community.general.homebrew:
         name: [
@@ -57,7 +58,7 @@
           'readline',
           'redis',
           'ripgrep',
-          'synology-drive',
+          #'synology-drive',
           'svn',
           'sqlite3',
           'tmux',
@@ -92,6 +93,7 @@
         - iterm2
         - kindle
         - ngrok
+        - raspberry-pi-imager
         - the-unarchiver
         - transmission
         - visual-studio-code
