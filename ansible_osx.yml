@@ -40,9 +40,9 @@
           'gpg',
           'htop',
           'imagemagick@6',
-          # 'kubectx',
-          # 'kubernetes-cli',
-          # 'kubernetes-helm',
+          'kubectx',
+          'kubernetes-cli',
+          'kubernetes-helm',
           'libtool',
           'libxslt',
           'libyaml',
@@ -104,6 +104,12 @@
         - font-source-sans-pro
         - font-ubuntu-nerd-font
         - font-hack-nerd-font
+
+    - name: Install emacs via brew casks with options
+      community.general.homebrew_cask:
+        name: "emacs-plus"
+        state: present
+        install_options: '--HEAD --with-modern-black-dragon-icon --with-mailutils'
 
     - name: "Install from Mac app store"
       shell: mas install {{ item }}
