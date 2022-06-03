@@ -109,7 +109,8 @@
       community.general.homebrew_cask:
         name: "emacs-plus"
         state: present
-        install_options: '--HEAD,--with-modern-black-dragon-icon,--with-mailutils'
+        #install_options: '--HEAD,--with-modern-black-dragon-icon,--with-mailutils'
+        install_options: '--with-modern-doom3-icon'
 
     - name: "Install from Mac app store"
       shell: mas install {{ item }}
