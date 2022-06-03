@@ -105,12 +105,12 @@
         - font-ubuntu-nerd-font
         - font-hack-nerd-font
 
-    - name: Install emacs via brew casks with options
-      community.general.homebrew_cask:
+    - name: Install emacs via brew  with options
+      community.general.homebrew:
         name: "emacs-plus"
         state: present
-        #install_options: '--HEAD,--with-modern-black-dragon-icon,--with-mailutils'
-        install_options: '--with-modern-doom3-icon'
+        install_options: with-modern-black-dragon-icon,with-mailutils,with-imagemagick
+        #install_options: "with-modern-doom3-icon"
 
     - name: "Install from Mac app store"
       shell: mas install {{ item }}
