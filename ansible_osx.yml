@@ -17,6 +17,7 @@
       community.general.homebrew_tap:
         name: [
           homebrew/cask,
+          homebrew/cask-drivers,
           homebrew/cask-fonts,
           homebrew/cask-versions,
           homebrew/bundle,
@@ -56,6 +57,7 @@
           'readline',
           'redis',
           'ripgrep',
+          'synology-drive',
           'svn',
           'sqlite3',
           'tmux',
