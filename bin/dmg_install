@@ -1,0 +1,4 @@
+#!/bin/sh
+sudo ansible-playbook dmg_playbook.yml
+
+#ansible-playbook -i "localhost," -c local ansible_osx.yml --ask-become-pass
