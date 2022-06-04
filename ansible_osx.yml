@@ -37,6 +37,7 @@
           'coreutils',
           'curl',
           'direnv',
+          'fd',
           'fzf',
           'gnu-time',
           'gpg',
