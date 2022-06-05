@@ -37,6 +37,7 @@
           'coreutils',
           'curl',
           'direnv',
+          'dockutil',
           'fd',
           'fzf',
           'gnu-time',
@@ -59,7 +60,7 @@
           'readline',
           'redis',
           'ripgrep',
-          #'synology-drive',
+          # 'synology-drive',
           'svn',
           'sqlite3',
           'tmux',
@@ -82,9 +83,10 @@
         name: "{{ item }}"
       ignore_errors: yes
       with_items:
-        - brave-browser
         - android-sdk
         - alfred
+        - brave-browser
+        - burp-suite
         - evernote
         - docker
         - vagrant
@@ -94,6 +96,7 @@
         - iterm2
         - kindle
         - ngrok
+        - postman
         - raspberry-pi-imager
         - the-unarchiver
         - transmission
@@ -110,22 +113,22 @@
         - font-ubuntu-nerd-font
         - font-hack-nerd-font
 
-    - name: Uninstall emacs if already installed
-      community.general.homebrew:
-        name: "emacs-plus"
-        state: absent
+    # - name: Uninstall emacs if already installed
+    #   community.general.homebrew:
+    #     name: "emacs-plus"
+    #     state: absent
 
-    - name: Install emacs via brew  with options
-      community.general.homebrew:
-        name: "emacs-plus"
-        state: present
-        install_options: with-modern-black-dragon-icon,with-mailutils,with-imagemagick
-        #install_options: "with-modern-doom3-icon"
-    
-    - name: Cloning Doom Emacs to .emacs.d directory
-      git:
-        repo: https://github.com/hlissner/doom-emacs
-        dest: "/Users/{{ lookup('env', 'USER') }}/.emacs.d"
+    # - name: Install emacs via brew  with options
+    #   community.general.homebrew:
+    #     name: "emacs-plus"
+    #     state: present
+    #     install_options: with-modern-black-dragon-icon,with-mailutils,with-imagemagick
+    #     #install_options: "with-modern-doom3-icon"
+
+    # - name: Cloning Doom Emacs to .emacs.d directory
+    #   git:
+    #     repo: https://github.com/hlissner/doom-emacs
+    #     dest: "/Users/{{ lookup('env', 'USER') }}/.emacs.d"
 
 
     - name: "Install from Mac app store"
@@ -155,8 +158,15 @@
     - name: Configure Dotfiles
       import_tasks: tasks/dotfiles.yml
 
+    - name: Configure symbolic link for org
+      shell: ln -s /Users/edworks/SynologyDrive/org /Users/edworks/org
+
     - name: Install Missing Fonts
       import_tasks: tasks/fonts.yml
+
+    # - name: Configure OSX Dock
+    #   import_tasks: tasks/dock.yml
+
 
     # - name: Install Oh My ZSH
     #   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
