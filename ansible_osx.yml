@@ -87,6 +87,7 @@
       with_items:
         - android-sdk
         - alfred
+        - authy
         - brave-browser
         - burp-suite
         - evernote
