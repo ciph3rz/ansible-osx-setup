@@ -85,6 +85,8 @@
         name: "{{ item }}"
       ignore_errors: yes
       with_items:
+        - 1password
+        - 1password-cli
         - android-sdk
         - alfred
         - authy
