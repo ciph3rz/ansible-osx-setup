@@ -1,0 +1,108 @@
+---
+homebrew_install_path: /usr/local/homebrew
+homebrew_installed_packages:
+  - ansible
+  - awscli
+  - docker
+  - git
+  - ssh-copy-id
+  - wget
+  - dockutil
+  - phpmd
+  - php-code-sniffer
+  - php-cs-fixer
+  - phpunit
+  - php72
+  - tree
+  - npm
+  - yarn
+  - docker-compose
+  - docker-machine
+  - docker-machine-nfs
+  - composer
+  - git-extras
+  - openvpn
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - google-chrome
+  - firefox
+  - vagrant
+  - virtualbox
+  - phpstorm
+  - slack
+  - istat-menus
+  - spotify
+  - 1password
+  - alfred
+  - tableplus
+  - postman
+
+dockitems_to_remove:
+  # - Launchpad
+  # - Mail
+  - Safari
+  - Contacts
+  # - Notes
+  # - Reminders
+  # - Maps
+  - Photos
+  # - Messages
+  - FaceTime
+  - Music
+  - iBooks
+  # - App Store
+  # - System Preferences
+  # - Calendar
+  - Siri
+  - TV
+  - Podcasts
+
+dockitems_to_persist:
+  - name: Safari
+    path: "/Applications/Safari.app"
+    pos: 3
+  - name: Brave Browser
+    path: "/Applications/Brave Browser.app"
+    pos: 4
+  - name: Google Chrome
+    path: "/Applications/Google Chrome.app"
+    pos: 5
+  - name: Emacs
+    path: "/Applications/emacs.app"
+    pos: 6
+  - name: Visual Studio Code
+    path: "/Applications/Visual Studio Code.app"
+    pos: 7
+  - name: Drafts
+    path: "/Applications/Drafts.app"
+    pos: 8
+  - name: iTerm
+    path: "/Applications/iTerm.app"
+    pos: 9
+  - name: Burb Suite
+    path: "/Applications/Burp Suite Community Edition.app"
+    pos: 10
+  - name: Postman
+    path: "/Applications/Postman.app"
+    pos: 11
+  - name: Foobar2000
+    path: "/Applications/foobar2000.app"
+    pos: 12
+  - name: UTM
+    path: /Applications/UTM.app
+    pos: 13
+  - name: Postman
+    path: /Applications/Postman.app
+    pos: 10
+  - name: Postman
+    path: /Applications/Postman.app
+    pos: 10
+  - name: System Preferences
+    path: "\"/Applications/System Preferences.app\""
+    pos: 15
+
+
+
+npm_packages:
+  - webpack
