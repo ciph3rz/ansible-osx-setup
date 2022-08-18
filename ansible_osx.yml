@@ -87,9 +87,9 @@
       with_items:
         - 1password
         - 1password-cli
-        - android-sdk
         - alfred
         - authy
+        - android-platform-tools
         - brave-browser
         - burp-suite
         - evernote
