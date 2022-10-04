@@ -140,7 +140,7 @@
     - name: "Install from Mac app store"
       shell: mas install {{ item }}
       with_items:
-        - 497799835 # xcode
+#        - 497799835 # xcode
         - 1437809329 # surfshark
         - 441258766 # Magnet
         - 1435957248 # Drafts
